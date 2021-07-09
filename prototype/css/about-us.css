@@ -1,0 +1,66 @@
+/* Setting the html and body to cover the whole page */
+html,
+body {
+  height: 100%;
+}
+/* setting the about us section to be a flex to make sure the img and the message will be positioned correctly */
+.about-us {
+  display: flex;
+  height: 100%;
+}
+
+/* setting the image and message to go to center and setting their sizes correctly */
+.img-container,
+.about-us-message {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* making the image round */
+.img-container img {
+  border-radius: 1000px;
+  width: 90%;
+}
+
+/* styling the message in about us section */
+.message {
+  width: 90%;
+  font-size: 36px;
+  align-self: flex-start;
+  color: #facd56;
+}
+
+@media only screen and (max-width: 1500px) {
+  .message {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 965px) {
+  .message {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us-message {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .img-container {
+    margin-top: 112px;
+    width: 90%;
+  }
+}
