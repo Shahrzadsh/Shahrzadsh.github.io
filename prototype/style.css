@@ -94,7 +94,27 @@ nav {
 
 h1 {
   font-size: 150px;
+  animation: 2s changeColor infinite;
 }
+
+@keyframes changeColor {
+  0% {
+    color: var(--color-orange);
+  }
+
+  40% {
+    color: #6eedf4;
+  }
+
+  70% {
+    color: yellow;
+  }
+
+  100% {
+    color: var(--color-orange);
+  }
+}
+
 .welcome-container h2 {
   color: var(--color-orange);
   font-size: 80px;

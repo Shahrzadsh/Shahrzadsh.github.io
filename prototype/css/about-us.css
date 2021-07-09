@@ -23,13 +23,13 @@ body {
 /* making the image round */
 .img-container img {
   border-radius: 1000px;
-  width: 90%;
+  width: 70%;
 }
 
 /* styling the message in about us section */
 .message {
   width: 90%;
-  font-size: 36px;
+  font-size: 30px;
   align-self: flex-start;
   color: #facd56;
 }
