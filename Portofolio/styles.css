@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+html {
+  height: 100vh;
+}
+body {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 1fr;
+  background-color: black;
+  background-image: url(./desktop-2065337_1280.png);
+  background-position: center;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 10px;
+}
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  height: 250px;
+  width: 200px;
+}
+main.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+a {
+  color: white;
+}
+.selected {
+  color: #2beede;
+}
+nav {
+  display: flex;
+  gap: 30px;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.main-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.main-buttons button {
+  background-color: #394648;
+  color: #2beede;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+.fa-twitter,
+.fa-linkedin-in {
+  font-size: 30px;
+  color: #2beede;
+}
