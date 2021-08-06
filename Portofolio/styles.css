@@ -13,12 +13,15 @@ body {
   grid-template-rows: 100px 1fr 100px;
   grid-template-columns: 1fr;
   background-color: black;
-  background-image: url(./desktop-2065337_1280.png);
+
   background-position: center;
   object-fit: contain;
   background-repeat: no-repeat;
   color: white;
   padding: 10px;
+}
+.background-img {
+  background-image: url(./desktop-2065337_1280.png);
 }
 header,
 footer {
@@ -26,9 +29,14 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+.logo-container {
+  width: 100px;
+  height: 100px;
+}
 .logo {
-  height: 250px;
-  width: 200px;
+  height: auto;
+  max-height: 100%;
+  width: 100%;
 }
 main.index {
   display: flex;
@@ -72,4 +80,50 @@ nav {
 .fa-linkedin-in {
   font-size: 30px;
   color: #2beede;
+}
+.main-portfolio img {
+  width: 100%;
+  max-height: 340px;
+}
+.main-portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.skills-container {
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  gap: 10px;
+}
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18.4;
+}
+.slider-full {
+  width: 200px;
+  height: 12px;
+  background-color: gray;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+.slider-halffull {
+  width: 150px;
+  height: 12px;
+  background-color: gray;
+}
+.portfolio-btn {
+  border-radius: 20px;
+  padding: 10px;
+  width: 150px;
+  background-color: #2beede;
 }
