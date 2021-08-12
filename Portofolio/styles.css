@@ -10,7 +10,7 @@ html {
 body {
   height: 100%;
   display: grid;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 100px 1fr 80px;
   grid-template-columns: 1fr;
   background-color: black;
 
@@ -18,20 +18,22 @@ body {
   object-fit: contain;
   background-repeat: no-repeat;
   color: white;
-  padding: 10px;
 }
 .background-img {
   background-image: url(./desktop-2065337_1280.png);
+  background-size: contain;
+  background-position: center center;
 }
 header,
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 .logo-container {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 .logo {
   height: auto;
@@ -46,6 +48,8 @@ main.index {
 }
 a {
   color: white;
+  font-size: 16px;
+  text-decoration: none;
 }
 .selected {
   color: #2beede;
@@ -81,28 +85,40 @@ nav {
   font-size: 30px;
   color: #2beede;
 }
+
+/* Portfolio */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 45%;
+}
+.info > p,
+.flex-column p {
+  color: #2beede;
+}
 .main-portfolio img {
   width: 100%;
-  max-height: 340px;
+  max-height: 480px;
 }
 .main-portfolio {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  row-gap: 3%;
 }
 .skills-container {
   display: flex;
   align-items: flex-start;
-  width: 50%;
   gap: 10px;
 }
 .slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 18.4;
+  height: 18px;
 }
 .slider-full {
   width: 200px;
@@ -114,7 +130,12 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  row-gap: 14px;
+}
+.flex-column p {
+  display: flex;
+  align-items: center;
+  height: 18px;
 }
 .slider-halffull {
   width: 150px;
@@ -126,4 +147,160 @@ nav {
   padding: 10px;
   width: 150px;
   background-color: #2beede;
+  border: none;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.my-image {
+  min-height: 252px;
+  max-height: 323px;
+}
+
+.cyan {
+  color: #2beede;
+}
+
+.intro {
+  max-width: 444px;
+}
+
+@media only screen and (min-width: 500px) {
+  a {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 715px) {
+  body {
+    grid-template-rows: 120px 1fr 100px;
+  }
+  nav {
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  a {
+    font-size: 30px;
+  }
+
+  .fab {
+    font-size: 70px;
+  }
+
+  .logo-container {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+}
+
+@media only screen and (min-width: 1480px) {
+  .b-about {
+    background-image: none;
+  }
+  body {
+    grid-template-rows: 120px 1fr 100px;
+  }
+
+  .background-img {
+    background-position: center right;
+    background-size: 50%;
+  }
+  nav {
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  a {
+    font-size: 30px;
+  }
+
+  .fab {
+    font-size: 70px;
+  }
+
+  .logo-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .index {
+    width: 50%;
+  }
+
+  .intro {
+    width: 100%;
+    max-width: none;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  body {
+    background-image: url(./Tablet-size-rotated.jpg);
+    background-position: right;
+    background-size: 40% contain;
+  }
+
+  .info {
+    flex-basis: 150%;
+  }
+
+  .main-portfolio {
+    align-items: flex-start;
+  }
+
+  .info {
+    width: 60%;
+  }
+
+  .main-portfolio > img:nth-child(1) {
+    display: none;
+  }
+
+  .info > p:nth-child(1) {
+    font-size: 70px;
+  }
+
+  div.flex-column {
+    gap: 35px;
+  }
+
+  div.flex-column:nth-child(1) > p {
+    font-size: 35px;
+    height: 35px;
+  }
+
+  .skills-container {
+    gap: 30px;
+  }
+
+  .slider-container {
+    height: 35px;
+  }
+
+  .slider-full,
+  .slider-halffull {
+    height: 20px;
+  }
+
+  .portfolio-btn {
+    width: 350px;
+    font-size: 44px;
+  }
 }
