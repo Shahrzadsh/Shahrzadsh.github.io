@@ -1,12 +1,16 @@
 * {
+  /* setting box-sizing to border-box to make design easier  */
   box-sizing: border-box;
+  /* reset padding and margin  */
   margin: 0;
   padding: 0;
+  /* setting font family for all elements  */
   font-family: arial;
 }
 html {
   height: 100vh;
 }
+/* defining grid for body  */
 body {
   height: 100%;
   display: grid;
@@ -24,6 +28,7 @@ body {
   background-size: contain;
   background-position: center center;
 }
+/* displays the styles of footer and header as flex and adjust it in center*/
 header,
 footer {
   display: flex;
@@ -31,6 +36,7 @@ footer {
   align-items: center;
   padding: 10px;
 }
+/* setting the width and height for logo to fit  */
 .logo-container {
   width: 80px;
   height: 80px;
@@ -40,6 +46,7 @@ footer {
   max-height: 100%;
   width: 100%;
 }
+/* setting main.index's position */
 main.index {
   display: flex;
   flex-direction: column;
@@ -54,6 +61,8 @@ a {
 .selected {
   color: #2beede;
 }
+
+/* displays the content of the nav as flex while filling the gap between  */
 nav {
   display: flex;
   gap: 30px;
@@ -86,7 +95,7 @@ nav {
   color: #2beede;
 }
 
-/* Portfolio */
+/* This is the Portfolio Part of styles */
 .info {
   display: flex;
   flex-direction: column;
@@ -150,7 +159,7 @@ nav {
   border: none;
 }
 
-/* About */
+/* This is the About part of styles*/
 .about {
   display: flex;
   flex-direction: column;
@@ -171,7 +180,7 @@ nav {
 .intro {
   max-width: 444px;
 }
-
+/*-----------------  This is my style  for tablet-------------------- */
 @media only screen and (min-width: 500px) {
   a {
     font-size: 24px;
@@ -200,7 +209,7 @@ nav {
     height: 120px;
   }
 }
-
+/* ------------- This is my style for Desktop--------------- */
 @media only screen and (min-width: 1100px) {
 }
 
