@@ -1,16 +1,19 @@
+/* Removed the global default margin and padding for more accurate control */
+/* Set the box-sizing to border-box to have an easier time with the sizes */
+/* Set the global font to arial */
 * {
-  /* setting box-sizing to border-box to make design easier  */
   box-sizing: border-box;
-  /* reset padding and margin  */
   margin: 0;
   padding: 0;
-  /* setting font family for all elements  */
   font-family: arial;
 }
+
+/* Made the html fill the whole users monitor */
 html {
   height: 100vh;
 }
-/* defining grid for body  */
+
+/* Set the grid for the body and the background color and settings for the background-image */
 body {
   height: 100%;
   display: grid;
@@ -23,12 +26,15 @@ body {
   background-repeat: no-repeat;
   color: white;
 }
+
+/* Background image for the body in index page */
 .background-img {
   background-image: url(./desktop-2065337_1280.png);
   background-size: contain;
   background-position: center center;
 }
-/* displays the styles of footer and header as flex and adjust it in center*/
+
+/* Set the design for the navigation and the social medias */
 header,
 footer {
   display: flex;
@@ -36,7 +42,8 @@ footer {
   align-items: center;
   padding: 10px;
 }
-/* setting the width and height for logo to fit  */
+
+/* Setting the logo size */
 .logo-container {
   width: 80px;
   height: 80px;
@@ -46,27 +53,32 @@ footer {
   max-height: 100%;
   width: 100%;
 }
-/* setting main.index's position */
+
+/* Making the main in the index flex to make it flow in a colum */
 main.index {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
+
+/* Making the anchor tag look nice */
 a {
   color: white;
   font-size: 16px;
   text-decoration: none;
 }
+/* Color for the current page in nav */
 .selected {
   color: #2beede;
 }
-
-/* displays the content of the nav as flex while filling the gap between  */
+/* Making the nave to flow into a row with gap of 30px */
 nav {
   display: flex;
   gap: 30px;
 }
+
+/* Setting the introduction in the index page look nice */
 .intro {
   display: flex;
   flex-direction: column;
@@ -74,6 +86,8 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
+/* The design for the main buttons */
 .main-buttons {
   display: flex;
   flex-direction: column;
@@ -89,28 +103,22 @@ nav {
   font-size: 20px;
   border-radius: 20px;
 }
+
+/* Setting the size for the twitter and linkedin icons */
 .fa-twitter,
 .fa-linkedin-in {
   font-size: 30px;
   color: #2beede;
 }
 
-/* This is the Portfolio Part of styles */
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  flex-basis: 45%;
-}
-.info > p,
-.flex-column p {
-  color: #2beede;
-}
+/* Portfolio */
+
+/* Making the img in the info have a max-height */
 .main-portfolio img {
   width: 100%;
   max-height: 480px;
 }
+/* Making the main flow to column and have a row-gap of 3% */
 .main-portfolio {
   display: flex;
   flex-direction: column;
@@ -118,22 +126,51 @@ nav {
   align-items: center;
   row-gap: 3%;
 }
+
+/* Information Container flowing into a column  */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 45%;
+}
+
+/* Making the skills in the info have a different color */
+.info > p,
+.flex-column p {
+  color: #2beede;
+}
+
+/* Putting everything in the beginning of the div */
 .skills-container {
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
+
+/* To make sure everything is the same height I gave the it the height of 18px */
 .slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 18px;
 }
+
+/* Making the sliders full */
 .slider-full {
   width: 200px;
   height: 12px;
   background-color: gray;
 }
+/* Making the half-full slider */
+.slider-halffull {
+  width: 150px;
+  height: 12px;
+  background-color: gray;
+}
+
+/* It's a flex column :D it also has the row-gap of 14px */
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -141,16 +178,15 @@ nav {
   align-items: flex-start;
   row-gap: 14px;
 }
+
+/* Setting the height for the paragraph tags the same has the slider containers */
 .flex-column p {
   display: flex;
   align-items: center;
   height: 18px;
 }
-.slider-halffull {
-  width: 150px;
-  height: 12px;
-  background-color: gray;
-}
+
+/* Design for the portfolio buttons */
 .portfolio-btn {
   border-radius: 20px;
   padding: 10px;
@@ -159,7 +195,9 @@ nav {
   border: none;
 }
 
-/* This is the About part of styles*/
+/* About */
+
+/* Design for the about div */
 .about {
   display: flex;
   flex-direction: column;
@@ -168,148 +206,160 @@ nav {
   padding: 10px;
 }
 
+/* Giving my image min-height and max-height */
 .my-image {
   min-height: 252px;
   max-height: 323px;
 }
 
+/* Giving the Color Cyan, I should have done this sooner to give it to everything that needs this color */
 .cyan {
   color: #2beede;
 }
 
+/* Giving the intro a max-width */
 .intro {
   max-width: 444px;
 }
-/*-----------------  This is my style  for tablet-------------------- */
+
+/* Just to make sure the anchor tags are readable in slightly bigger screens */
 @media only screen and (min-width: 500px) {
   a {
     font-size: 24px;
   }
 }
 
+/* First major breakpoint */
 @media only screen and (min-width: 715px) {
+  /* Changing the main grid slightly to fit the new screen size */
   body {
     grid-template-rows: 120px 1fr 100px;
   }
+
+  /* Changing the nave to be bigger and wider */
   nav {
     justify-content: space-around;
     width: 50%;
   }
 
+  /* Making the anchor tags bigger */
   a {
-    font-size: 30px;
+    font-size: 25px;
   }
 
+  /* Making the icons bigger */
   .fab {
-    font-size: 70px;
+    font-size: 65px;
   }
 
+  /* Making the logo bigger */
   .logo-container {
-    width: 120px;
-    height: 120px;
+    width: 115px;
+    height: 115px;
   }
 }
-/* ------------- This is my style for Desktop--------------- */
-@media only screen and (min-width: 1100px) {
-}
 
+/* The second major breakpoint */
 @media only screen and (min-width: 1480px) {
+  /* Removing the background image from the .b-about */
   .b-about {
     background-image: none;
   }
-  body {
-    grid-template-rows: 120px 1fr 100px;
-  }
 
+  /* Fixing the background image's position */
   .background-img {
     background-position: center right;
     background-size: 50%;
   }
-  nav {
-    justify-content: space-around;
-    width: 50%;
-  }
 
+  /* Making the anchor tag bigger */
   a {
     font-size: 30px;
   }
 
+  /* Making the icons bigger */
   .fab {
     font-size: 70px;
   }
 
-  .logo-container {
-    width: 120px;
-    height: 120px;
-  }
-
+  /* making the index fill half the page */
   .index {
     width: 50%;
   }
 
+  /* Removing the width limit of intro */
   .intro {
     width: 100%;
     max-width: none;
   }
 
+  /* Making the h1 tag bigger */
   h1 {
     font-size: 50px;
   }
 
+  /* Making the p tags bigger */
   p {
     font-size: 30px;
   }
 
+  /* Changing the body's background image */
   body {
     background-image: url(./Tablet-size-rotated.jpg);
     background-position: right;
     background-size: 40% contain;
   }
 
+  /* Making the info bigger */
   .info {
     flex-basis: 150%;
   }
 
+  /* Setting the items in the main-portfolio to stick to left */
   .main-portfolio {
     align-items: flex-start;
   }
 
+  /* Fixing the info size */
   .info {
     width: 60%;
   }
 
+  /* Setting the display for the image in the main-portfolio to none */
   .main-portfolio > img:nth-child(1) {
     display: none;
   }
 
-  .info > p:nth-child(1) {
-    font-size: 70px;
-  }
-
+  /* Changing the gap in flex-column */
   div.flex-column {
     gap: 35px;
   }
 
+  /* Fixing the size of the paragraph tags in the flex-column's first child */
   div.flex-column:nth-child(1) > p {
-    font-size: 35px;
+    font-size: 30px;
     height: 35px;
   }
 
+  /* Fixing the gap in the skills-container and the height */
   .skills-container {
     gap: 30px;
   }
 
+  /* Setting the the height for the slider bars */
   .slider-container {
     height: 35px;
   }
 
+  /* Setting the height for the slider bars */
   .slider-full,
   .slider-halffull {
     height: 20px;
   }
 
+  /* making the portfolio button bigger overall */
   .portfolio-btn {
-    width: 350px;
-    font-size: 44px;
+    width: 300px;
+    font-size: 40px;
   }
 }
